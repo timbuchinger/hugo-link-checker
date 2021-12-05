@@ -2,6 +2,7 @@
 
 URL="http://localhost:1313"
 echo "1"
+cd "${INPUT_WORKING_DIRECTORY}"
 eval hugo server "${INPUT_HUGO_OPTIONS}" > /dev/null &
 echo "2"
 for i in $(seq 0 30); do

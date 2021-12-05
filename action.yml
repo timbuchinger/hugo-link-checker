@@ -5,16 +5,20 @@ branding:
   icon: stop-circle
   color: gray-dark
 inputs:
-  hugo-options:
+  hugo_options:
     description: 'Options to be passed to the hugo serve command.'
     default: ''
     required: false
-  muffet-options:
+  muffet_options:
     description: 'Options to be passed to the muffet command.'
     default: ''
     required: false
-  timeout-seconds:
+  timeout_seconds:
     description: 'The maximum amount of time to spend testing the website before timing out.'
+    default: '60'
+    required: false
+  working_directory:
+    description: ''
     default: '60'
     required: false
 runs:
