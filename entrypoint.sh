@@ -1,8 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 
 URL="http://localhost:1313"
-
-eval hugo server "${INPUT_HUGO_OPTIONS}" > /dev/null &
+echo "1"
+eval ./go/bin/hugo server "${INPUT_HUGO_OPTIONS}" > /dev/null &
+echo "2"
 for i in $(seq 0 ${INPUT_TIMEOUT_SECONDS}); do
     sleep 1
     IS_SERVER_UP=$(curl -IL ${URL} -o /dev/null -w '%{http_code}' -s)
